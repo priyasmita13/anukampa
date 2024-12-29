@@ -7,7 +7,8 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <h2>Anukampa</h2>
+          <img src='images/favicon1.png' height={70}/>
+          {/* <h2>Anukampa</h2> */}
         </div>
 
         {/* Links */}
