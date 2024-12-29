@@ -1,0 +1,87 @@
+/* Navbar styles */
+.navbar {
+  background-color: #2E2E38;
+  color: #ffffff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative; 
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 150px; 
+}
+
+.navbar-logo h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  font-size: 1rem;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #f1c40f; 
+}
+
+.navbar-top-right {
+  top: 15px;
+  right: 50px; 
+  display: flex;
+  align-items: center;
+  gap: 15px; /
+}
+
+.navbar-profile {
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar-language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar-language span {
+  font-weight: 500;
+}
+
+.navbar-language i {
+  font-size: 1.2rem;
+}
+
+.navbar-language i.fa-caret-down {
+  color: #f1c40f; 
+}
+
+.navbar-language i.fa-globe {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
