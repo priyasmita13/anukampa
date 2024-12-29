@@ -1,19 +1,17 @@
 import React from 'react';
 import Navbar from './Navbar';
-import './Header.css'; 
+import SearchBar from './SearchBar';
+import './Header.css';
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <Navbar />
+      <SearchBar />
       <div className="hero-section">
-        <div className="hero-content">
-          <h1>Discover government schemes for you...</h1>
-          <p>Find personalized schemes based on eligibility.</p>
-        </div>
         <img
-          className="hero-image"
-          src="/images/hero.png" 
+          className="hero-background"
+          src="/images/hero.png"
           alt="Hero Section"
         />
       </div>
