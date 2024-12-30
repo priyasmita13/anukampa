@@ -1,62 +1,52 @@
+.navbar-container {
+  position: relative;
+}
+
+.toggle-search-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
 .search-bar-container {
-    width: 100%;
-    background-color: rgba(211, 211, 211, 0.6); 
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #2d2d2d; 
-    border: 1px solid #2d2d2d;
-    height: 40px;
-    width: 60%; 
-    max-width: 800px;
-  }
-  
-  .advanced-search {
-    background-color: #2E2E38; 
-    border: none;
-    padding: 0 15px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #FFE600;
-    cursor: pointer;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-  }
-  
-  .search-input {
-    flex: 1;
-    padding: 0 10px;
-    border: none;
-    font-size: 1rem;
-    color: #000;
-    height: 100%;
-  }
-  
-  .search-input::placeholder {
-    color: #b3b3b3;
-  }
-  
-  .search-button {
-    background-color: #2d2d2d; 
-    color: #ffc107;
-    border: none;
-    padding: 0 15px;
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .search-button i {
-    font-size: 1.2rem;
-  }
-  
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width : 1000px
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #ffc107;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button i {
+  font-size: 1.2rem;
+}

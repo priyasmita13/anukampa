@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
@@ -9,31 +9,46 @@ const Hero = () => {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <div className="hero-carousel">
-      <button className="hero-arrow left" onClick={handlePrev}>
+      <div
+        className="hero-image-slider"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <img
+            key={index}
+            className="hero-image"
+            src={image}
+            alt={`Hero ${index + 1}`}
+          />
+        ))}
+      </div>
+      <button
+        className="hero-arrow left"
+        onClick={() =>
+          setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+          )
+        }
+      >
         &#8249;
       </button>
-      <div className="hero-image-container">
-        <img
-          className="hero-image"
-          src={images[currentIndex]}
-          alt={`Hero ${currentIndex + 1}`}
-        />
-      </div>
-      <button className="hero-arrow right" onClick={handleNext}>
+      <button
+        className="hero-arrow right"
+        onClick={() =>
+          setCurrentIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          )
+        }
+      >
         &#8250;
       </button>
     </div>
